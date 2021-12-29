@@ -1,12 +1,19 @@
 import React from 'react'
 import Footer from './components/Footer'
 import NavBar from './components/NavBar'
+import Services from './components/Services'
+import Transaction from './components/Transaction'
+import Wellcome from './components/Wellcome'
 
 const App = () => {
     return (
-        <div>
-            <NavBar />
-            <h1 className="text-center">fhsdgf</h1>
+        <div className="min-h-screen">
+            <div className="gradient-bg-welcome">
+                <NavBar />
+                <Wellcome />
+            </div>
+            <Services />
+            <Transaction />
             <Footer />
         </div>
     )
