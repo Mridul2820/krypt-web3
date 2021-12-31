@@ -21,7 +21,7 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
 const Wellcome = () => {
     const companyCommonStyles = "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white";
 
-    const { connectWallet, currentAccount, handleChange, formData, sendTransaction } = useContext(TransactionContext);
+    const { currentAccount, connectWallet, handleChange, sendTransaction, formData, isLoading } = useContext(TransactionContext);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -126,7 +126,7 @@ const Wellcome = () => {
 
                         <div className="h-[1px] w-full bg-gray-400 my-2" />
 
-                        {false
+                        {isLoading
                             ? <Loader />
                             : 
                             <button
